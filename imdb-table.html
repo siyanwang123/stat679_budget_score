@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+    <link rel="stylesheet" href="imdb.css">
+    <text x="10" y="20" text-anchor="bold" font-size="40"> Movies Budget Analysis </text>
+  </head>
+  <body>
+    <div id="scatter">
+      <svg height="400" width="1200">
+        <g id="circles"/>
+        <g id="axes"/>
+        <g id="table">
+          <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-0pky">Name</th>
+              <th class="tg-0pky">Release year</th>
+              <th class="tg-0lax">Budget</th>
+              <th class="tg-0lax">Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="title" class="tg-0pky"></td>
+              <td id="year" class="tg-0pky"></td>
+              <td id="budget" class="tg-0lax"></td>
+              <td id="genre" class="tg-0lax"></td>
+            </tr>
+          </tbody>
+          </table>
+        </g>
+      </svg>
+    </div>
+    <div id="linechart">
+      <svg height="300" width="1200">
+        <text x="10" y="20" text-anchor="bold" font-size="18" fill="black">Budget Tendency</text>
+        <g id="series"/>
+        <g id="tooltip">
+          <text></text>
+        </g>
+        <g id="Line_axes"/>
+      </svg>
+    </div>
+  </body>
+  <script src="imdb-table.js"></script>
+</html>
